@@ -3,7 +3,7 @@ data-port: 2368
 type: velodyneVLP16
 
 gps: False
-text: True
+text: False
 ply: True
 
 from: 0  # first packet to read
