@@ -156,12 +156,12 @@ class VelodyneManager():
             gpsweek, gpsdays, gpsseconds, gpsmicrosec = utc_to_weekseconds(self.datetime, 0)
 
             if self.params['text']:
-                fpath = "{}/{}_frame_{}.{:06d}.txt".format(self.txt_path, self.frame_nr, gpsseconds, gpsmicrosec)
+                fpath = "{}/{}_frame_{}.{:06d}.txt".format(self.txt_path, self.frame_nr, gpsweek, gpsseconds)
                 write_pcl_txt(fpath, self.timestamps, self.pos_X, self.pos_Y, self.pos_Z, self.indicies,
                               self.intensities, self.latitudes, self.longitudes, self.distances)
 
             if self.params['ply']:
-                fpath = "{}/{}_frame_{}.{:06d}.pcd".format(self.pcl_path, self.frame_nr, gpsseconds, gpsmicrosec)
+                fpath = "{}/{}_frame_{}.{:06d}.pcd".format(self.pcl_path, self.frame_nr, gpsweek, gpsseconds)
                 write_pcd(fpath, self.pos_X, self.pos_Y, self.pos_Z, self.intensities)
 
             # reset states
