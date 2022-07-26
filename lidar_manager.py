@@ -8,7 +8,6 @@ from tqdm import tqdm
 from gps import GprmcMessage, utc_to_weekseconds
 import lidar
 
-
 class VelodyneManager():
 
     def __init__(self, type, pcap_path, out_root, params):

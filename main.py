@@ -5,7 +5,6 @@ from lidar_manager import *
 
 GPS=True
 
-
 def read_params(path):
     try:
         f = open(path, 'rb')
@@ -14,7 +13,6 @@ def read_params(path):
 
     params = yaml.load(f.read(), Loader=yaml.FullLoader)
     return params
-
 
 def main(args):
     path = args['path']
@@ -28,7 +26,6 @@ def main(args):
         lidar_manager = VelodyneManager(lidar_type, path, outdir, params)
 
     lidar_manager.run()
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

@@ -1,5 +1,3 @@
-
-
 def utc_to_weekseconds(utc,leapseconds):
     """ Returns the GPS week, the GPS day, and the seconds
         and microseconds since the beginning of the GPS week
