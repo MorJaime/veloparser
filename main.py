@@ -21,6 +21,7 @@ def main(args):
     config = args['config']
 
     params = read_params(config)
+    print(params)
 
     if "velodyne" in lidar_type.lower():
         lidar_manager = VelodyneManager(lidar_type, path, outdir, params)
