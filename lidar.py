@@ -210,7 +210,7 @@ class VelodyneVLP16(Lidar):
     def read_firing_data(self, data):
         block_id = data[0] + data[1]*256
         # 0xeeff is upper block
-        assert block_id == 0xeeff
+        #assert block_id == 0xeeff
 
         azimuth = (data[2] + data[3] * 256) / 100
 
